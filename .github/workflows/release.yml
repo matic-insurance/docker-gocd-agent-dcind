@@ -12,7 +12,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . -f Dockerfile -t maticinsurance/gocd-agent-with-dcind:latest
       - name: Define Docker tag
-        run: echo "${GITHUB_REF/refs\/heads\//}" > docker.tag
+        run: echo "${GITHUB_REF/refs\/tags\//}" > docker.tag
       - name: Tag docker image
         run: docker tag maticinsurance/gocd-agent-with-dcind:latest maticinsurance/gocd-agent-with-dcind:$(<docker.tag)
       - name: Login to Docker
