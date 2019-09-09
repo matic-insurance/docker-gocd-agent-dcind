@@ -23,7 +23,7 @@ RUN apk add --update --no-cache \
     libc-dev \
     make
 
-ARG COMPOSE_VERSION=1.24.0
+ARG COMPOSE_VERSION=1.24.1
 RUN pip install docker-compose==${COMPOSE_VERSION}
 
 COPY --from=ecr-credentials /go/bin/docker-credential-ecr-login /usr/local/bin/docker-credential-ecr-login
