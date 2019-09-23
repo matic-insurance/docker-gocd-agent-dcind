@@ -21,7 +21,8 @@ RUN apk add --update --no-cache \
     openssl-dev \
     gcc \
     libc-dev \
-    make
+    make \
+    jq
 
 ARG COMPOSE_VERSION=1.24.1
 RUN pip install docker-compose==${COMPOSE_VERSION}
