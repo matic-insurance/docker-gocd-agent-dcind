@@ -1,4 +1,4 @@
-ARG GOCD_VERSION=v19.8.0
+ARG GOCD_VERSION=v19.9.0
 
 # Amazon ECR credential-helper
 FROM golang:1.12-alpine AS ecr-credentials
